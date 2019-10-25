@@ -42,102 +42,304 @@
                   often confused by misuse in popular media. You should take time to understand
                   and feel comfortable before diving in.
                 </p>
-                <h4>What is a cryptocurrency?</h4>
-                <p>
-                  For a long time there have been currencies, usually issued by a country, kingdom, bank,
-                  or company large enough to be the center of the local economy. Economists and
-                  scholars have lived and died arguing the details of what makes currencies work, why some
-                  currencies outperform others, and whether our current prevailing system
-                  encourages future development.
-                </p>
-                <p>
-                  A cryptocurrency uses proven math to provide users with an unforge-able, cryptographic key. That
-                  key allows you to prove ownership of the account and sign payments, which can easily be verified
-                  by other users. Not every cryptocurrency works exactly the same way, but in Bitcoin there is a
-                  decentralized system (no single leader or technical failure point), and there is a fixed limit
-                  to how much Bitcoin will ever be 'mined' and distributed (21 million).
-                </p>
-                <blockquote>
-                  What is your learning style? Would you prefer to listen to an explanation of cryptocurrency?
-                  <br/>
-                  Listen to investment management company co-founder Linda Xie on the A16Z podcast:
-                  <a href="https://a16z.com/2018/05/04/intro-to-crypto/">'Intro to Crypto'</a>
-                </blockquote>
 
-                <h4>What makes cryptocurrency so different from traditional currencies?</h4>
+                <h4>What is a blockchain?</h4>
                 <p>
+                  A cryptocurrency has a ledger of transactions from person to person. When Alice wants to
+                  send a message 'I send $10 to Bob' it can be verifiably signed by her, and the community can
+                  credit Bob and debit Alice's account, if she holds enough to make the payment.
+                </p>
+                <p>
+                  Valid transactions get bundled together into blocks, which are issued in an ongoing sequence,
+                  confirming the order of transactions and previous transactions leading up to the current state.
+                  If you download the entire blockchain, you will know how much Bitcoin is currently stored in every account.
+                </p>
+                <p>
+                  As long as people trade Bitcoin, we will need to know the value of their accounts, so every transaction is
+                  recorded permanently in the blockchain. This has inspired creative uses of the blockchain for permanent data,
+                  including censorship-avoidance and marriage proposals.
+                </p>
+
+                <h4>Bitcoin</h4>
+                <p>
+                  The original blockchain-based cryptocurrency (combining several older ideas in the cryptography / cypherpunk world).
+                  Bitcoin has always held the highest market cap of any cryptocurrency, but others have come close.
+                  The amount of Bitcoin available is regulated with algorthmic scarcity; eventually it will max out at 21 million Bitcoin.
+                </p>
+
+                <em>Satoshi Nakamoto: Who invented Bitcoin?</em>
+                <p>
+                  As of this writing, it's not known.
+                </p>
+                <p>
+                  The concept of a cryptocurrency emerged in the 1980s when technologists started discussing how the internet could change how information,
+                  money, and governmental power were organized. Some of these ideas influenced how we now freely share news and shop online today. Other ideas
+                  remain unrealized, particularly an alternative to the banking system (depending on who you talk to, this could mean: currency issued or
+                  controlled by a government or central bank, currency backed by 'fiat', banks handling your deposits and processing your credit card purchases,
+                  or any facet of the current system). Technologist-activists known as 'cypherpunks' agreed that a cryptographic key could identify a person's
+                  bank account, and transfer money between accounts as easily as it sent encrypted messages.
+                </p>
+                <p>
+                  The Bitcoin whitepaper in 2008 (followed by software release in 2009) approached the problem by combining two ideas - blockchain and
+                  Proof of Work (PoW) - in a way which was compelling to cypherpunks. The author used the name 'Satoshi Nakamoto' and left several comments
+                  on message boards (now recorded on the Nakamoto Institute). Researchers have scrutinized these messages, log in times, spelling and word
+                  choice, cryptographic signatures, hacked email inboxes, and other minute details without finding who 'Satoshi' might be. There has been no
+                  verified Satoshi post since 2010, and no reliable email since 2011, as the Bitcoin codebase moved onto new maintainers, and gained notoriety
+                  in the press in connection with WikiLeaks and other platforms.
+                </p>
+                <p>
+                  Among speculation of dozens of potential authors, there have been two major 'announcements' of Satoshi's identity: Newsweek identifying Dorian Satoshi Nakamoto in California (denied and since dismissed), and Wired and Gizmodo suggesting Craig Wright (who then did press with The Economist, BBC, and London Review of Books). In follow-ups, Wright has yet to sign a public message with one of Satoshi's keys, and explain inconsistencies in documents. This has made him a controversial figure with legal issues <a href="https://twitter.com/wizsecurity/status/1147412870063280129">in the United States</a>
+                  and in Australia.
+                </p>
+                <p>
+                  So again, it's not known.
+                </p>
+
+                <em>Satoshi: Theories over the years</em>
+                <ul>
+                  <li>Many sources (including a <a href="https://www.nytimes.com/2015/05/17/business/decoding-the-enigma-of-satoshi-nakamoto-and-the-birth-of-bitcoin.html">New York Times article</a>)
+                    speculate that <a href="https://en.wikipedia.org/wiki/Nick_Szabo#Bitcoin_speculation">Nick Szabo</a>,
+                    an economist with a history of digital currency research, was involved. Satoshi’s original white paper cited several experts in the field but missed Szabo. Others claim that Szabo has edited his blog to distance himself from Bitcoin. Szabo is sometimes referred to as a professor, but his academic career is unclear. He continues to appear at Bitcoin events.</li>
+                  <li><a href="http://www.newyorker.com/magazine/2011/10/10/the-crypto-currency">The New Yorker</a> considered several cryptography researchers in 2011 and pointed to one, Michael Clear.</li>
+                  <li>Others suggested that a wider group of academics launched Bitcoin and registered several domains connected to it before it was announced.</li>
+                  <li>Questions were raised about when core developers Martti Malmi and Gavin Andresen joined the project, and whether one of them was the same person as Satoshi Nakamoto.</li>
+                  <li>
+                    Paul Graham of Y-Combinator
+                    <a href="https://news.ycombinator.com/item?id=5547423">suggested that Bitcoin is made by a government</a>,
+                    as (like the Stuxnet virus) it has no public authors or prior published research. Why make Bitcoin, then?
+                    <blockquote>
+                      <ol>
+                        <li>To finance their own black operations.</li>
+                        <li>Because they thought digital currencies were inevitable, and they preferred bitcoin to some potentially more malevolent form. (Could bitcoin have been worse from a government’s point of view?)</li>
+                        <li>A friend suggested this: because they felt their currency would never become the standard reserve currency, and they felt it was better that no one’s be if theirs couldn’t be.</li>
+                        <li>A variant of the above: the US did it because it seemed inevitable that the dollar would eventually lose its place as the standard reserve currency, and better to have it replaced by bitcoin that the yuan.</li>
+                      </ol>
+                    </blockquote>
+                  </li>
+                </ul>
+
+                <h4>Ethereum</h4>
+                <p>
+                  A cryptocurrency and blockchain which includes additional features for programming what is called a distributed universal computer.
+                  More about this in smart contracts. The cryptocurrency was founded by Vitalik Buterin and ___, with Vitalik continuing to run the
+                  Ethereum Foundation and promote it on social media and at conferences worldwide.
+                </p>
+
+                <h4>Litecoin</h4>
+                <p>
+                  A cryptocurrency and blockchain which is closely related to Bitcoin, but uses a different algorithm (scrypt) for mining. This was and continues to be seen as a more level playing field for small and big miners.
+                </p>
+                <p>
+                  The founder ___ famously (and controversially) sold all of his Litecoin holdings, on the principle that to avoid being seen as trying to manipulate or protect the price.
+                </p>
+
+                <h4>ZCash</h4>
+                <p>
+                  Zcash doesn't have as high of a market cap as other cryptocurrencies, but is interesting for developments of an encrypted blockchain and zk-Snarks (discussed in a future chapter). Unlike other blockchains, where the transaction history is publicly visible, it is not possible to view Zcash history.  (began as Zerocoin?)
+                </p>
+
+                <h4>Namecoin</h4>
+                <p>
+                  A concept to decentralize internet addresses, allowing anyone to register a domain name anonymously. Once addresses are in the blockchain they cannot be censored because it’s distributed on so many computers.
+                  ENS
+                </p>
+
+                <h4>Centralized Coins: Libra, Ripple, and Stellar</h4>
+                <p>
+                  Discussions of regulating cryptocurrency reopened after Facebook engineers announced the creation of a new cryptocurrency, to be governed by a foundation with connections to several major companies.
+                </p>
+
+                <h4>What are forks?</h4>
+                <p>
+                  In the free and open source software communities, programmers have access to the internal source code of programs and the standards for communicating. If the admin of a popular open source app stops working on the code, or makes an unpopular decision, some tech-savvy users may decide to split the code off into a new "fork", and take responsibility for it.
+                </p>
+                <p>
+                  A fork can be motivated by any disagreement (technical, personal, legal, or political), especially when groups lack a common leadership or decision-making process. Escalating a disagreement to this level is unlikely, though, because it risks dividing the community and doubling work (as any bugs now need to be fixed in both projects).
+                </p>
+                <p>
+                  ​Due to the open source code, decentralized technologies, and spontaneous communities popular in cryptocurrencies, it is common for a cryptocurrency and its blockchain / history to be forked. Usually after the fork, an account with 1 Coin becomes two accounts: 1 Coin-A and 1 Coin-B. If you have ever owned Bitcoin, it's possible that you have coins in other blockchains without knowing it! If you don't plan to use Coin-B, you could access your wallet and sell your holdings there.
+                </p>
+                <p>
+                  Even when it's technically possible to create a fork, it is difficult to win over a community, especially when a fork may threaten instability in people's savings and investments. Before high-profile forks, miners typically embed a flag showing their intention into their messages, allowing anyone to gauge popularity of a decision. If even 10% of miners indicate a plan to move, this may motivate other miners to take a fork more seriously.
+                </p>
+
+                <h5>Ethereum Classic</h5>
+                <p>
+                  Earlier you learned that Ethereum's blockchain contains programs known as SMART CONTRACTS. In 201?, an attacker manipulated a loophole in one of these contracts ("the DAO") and siphoned off money which many users had invested. As much as 1/6th of all available Ether was invested into the DAO.
+                </p>
+                <p>
+                  The lead Ethereum developers decided intervene and to reverse / "roll back" the outcome of The DAO as though it had not happened. This appalled some purist members of the Ethereum community - what future contracts might get reversed or deleted? A fork was created without this change, and the new, non-reversed branch became known as Ethereum Classic. This was the highest-profile cryptocurrency fork of the time, so initially there was confusion from users and apps. For example, a user might create a wallet address on Blockchain-A, and try to send money from their wallet on Blockchain-B. The money would be lost.
+                </p>
+                <p>
+                  Today you can tell them apart on exchanges as Ethereum (ETH) and Ethereum Classic (ETC).
+                </p>
+
+                <h5>Bitcoin Cash and Bitcoin SV</h5>
+                <p>
+                  For years, Bitcoin had considered changes over block size. The ideal block size on the blockchain became a divisive issue, with each side claiming that they would lower transaction fees and improve uptake of Bitcoin worldwide. There were concerns that a larger block size would make it difficult for everyday users to run a full node, or that technical decisions were influenced by Chinese mining organizations and internet connectivity. Bitcoin developer XYZ announced he was quitting because XYZ. Reddit split into /r/bitcoin and /r/btc; websites Bitcoin.com and Bitcoin.org promoted opposite sides, Twitter accounts were split as well.
+                </p>
+                <p>
+                  The difficulties in Ethereum's fork raised users' fears and prolonged the debate. Everyone was afraid to weaken the Bitcoin community through technical failures, media speculation, and potential power struggles. A split seemed inevitable, but what would it mean? Could Bitcoin point-of-sale and checkout apps support both currencies? Was there sufficient interest in a rebel fork, or was the fork the REAL "Satoshi's vision" Bitcoin?
+                </p>
+                <p>
+                  Ultimately, Bitcoin Cash (BCH) split from the newly-named "Bitcoin Core" (BTC) on August 201?.
+                </p>
+                <p>
+                  In 201?, Bitcoin SV split from Bitcoin Cash due to disagreements by Craig Wright (Satoshi claimer) team. Roger Ver's Bitcoin.com team remains on Bitcoin Cash.
+                </p>
+
+                <h5>Ycash</h5>
+                <p>Ycash is a recent (2019) fork of Zcash. Part of the Zcash transactions goes to a founder/developer fee to keep the currency sustainable, which has been controversial. Ycash is a political decision to move to a new blockchain and avoid these fees. https://medium.com/@YcashFoundation/an-open-letter-to-cryptocurrency-exchanges-from-the-ycash-foundation-regarding-the-upcoming-1689ef14d673</p>
+
+                <h4>Transaction fees</h4>
+                <h5>Who sets fees, and where do they go?</h5>
+                <p>
+                  Cryptocurrency miners combine multiple transactions into blocks. Each transaction adds a fee (based on a prevailing rate suggested by your wallet app, based on current traffic) and this fee is paid toward the miners. When a cryptocurrency with a fixed supply (such as Bitcoin) is effectively entirely mined, miners will continue operating on the proceeds of these transactions. A fee also discourages spammers and others from polluting the blockchain with tiny microtransactions ('dust').
+                </p>
+                <ul>
+                  <li>Fees were a major concern when traffic increases on the blockchain - during Bitcoin's peak value in December 2017, transactions cost on average $28. Blockchain changes and Lightning Network have already improved on this. https://www.coindesk.com/bitcoin-low-fees-why-happening-why-matters</li>
+                  <li>If you have a transaction with zero fee allocated, it's possible that you or a charitable miner could include it in a block, but it likely would sit unconfirmed for a long time or be returninged to you. Without a fee, there is no motivation for any miner to check the validity. https://hackernoon.com/holy-cow-i-sent-a-bitcoin-transaction-with-too-low-fees-are-my-coins-lost-forever-7a865e2e45ba</li>
+                  <li>By recommending a higher-than-normal fee, you could improve your chances at a quickly confirmed transaction.</li>
+                  <li>A few transactions have an extraordinary fee and little payment, which may be a method for miners to transfer or launder money. https://blog.bitgo.com/the-challenges-of-bitcoin-transaction-fee-estimation-e47a64a61c72 https://en.bitcoin.it/wiki/Miner_fees</li>
+                </ul>
+
+                <h3>Addresses and Wallets</h3>
+                <p>
+                  https://en.bitcoin.it/wiki/Deterministic_wallet Just like you can store cash and credit cards in a physical wallet, a cryptocurrency wallet stores one or more cryptocurrencies in an app on your phone, computer, browser, or physical device.
+                </p>
+                <p>
+                  Early on, people would have one address in their wallet to send and receive money, similar to how you likely have one main email address or phone number. Eventually people became more concerned about how every input and output was public on the blockchain. Suppose that a restaurant uses only one blockchain address - if you use it or even see that address, then you would see their income, times when customers paid, and all of those customers' addresses, and continue collecting information on those customers.
+                </p>
+                <p>
+                  In most current applications, your wallet app manages a practically unlimited number of addresses. Instead of printing a QR code or address on a menu, every customer is shown a tablet with a new address to pay their bill. When you make a payment from an address, your app may create a new "change address" and send the
+                  remaining coins there. To an outside observer, it will be unclear what was a payment and what was retained in your wallet.
+                </p>
+                <p>
+                  --Avoid printing a cryptocurrency address-- it will only change later and you may lose access to its keys.
+                </p>
+
+                <h4>Cold Wallets</h4>
+                <p>
+                  Out of fears that a digital wallet may be hacked, some cryptocurrency keys are saved to USB drives stored offline or even in safe-deposit boxes, known as 'cold storage' (more about this in Systemic Threats / Hacking). To be effective, all of the key information (or all of the key minus the password) should be stored offline and deleted from the originating computer. You should test carefully before sending money to a cold wallet address, to verify that it is easily recoverable and that you've remembered the address and passcode correctly.
+                </p>
+                <h5>​What is a paper wallet?</h5>
+                <p>
+                  Some cold wallet users print out the key information (or the key minus a password) onto paper, and store that in a secure location. Do not take and share photos of your key information. As with any other cold wallet, you should verify that it is easily recoverable and that you've remembered the address and passcode correctly.
+                </p>
+
+                <h5>​Why can't we use paper wallets as cash?</h5>
+                <p>
+                  If I can print an address and key information onto paper, why not print my own money? This idea has been pursued many times, but doesn't pass a rigorous though process. Suppose that I hand you a paper wallet and promise
+                  that the associated address has $10 of Bitcoin.
                   <ul>
-                    <li>It's possible to quickly send payments to anyone in the world, for a small fee.</li>
-                    <li>The currency supply is determined by programming, not people.</li>
-                    <li>You can use free/libre software to create a key and 'be your own bank', without going to one official website, app, or company.</li>
+                    <li>Without internet access, you have no way to verify the current value of the address. You refuse the bill as payment.</li>
+                    <li>With internet access you check the blockchain and verify the current value, but I could be copying this bill many times over with the same address/key information. By the time you get home, someone may have transferred the money out, so the address on the bill is always at risk of becoming worthless.</li>
+                    <li>If you prevent that loss by immediately moving money from the bill to a different address which you control, the account associated with the bill has lost its value; there is no point to printing a bill which cannot be reused.</li>
                   </ul>
-                  The supply of Bitcoin has a hard limit and is deflationary - as the economy expands, demand increases, and mining rewards shrink, each coin will increase in value.
-                  Monetary policy varies for other cryptocurrencies, but its settings are usually programmed in from the start.
                 </p>
 
-                <h4>Can Islamic finance accept a cryptocurrency?</h4>
+                <h5>What is a brain wallet?</h5>
                 <p>
-                  Multiple cryptocurrencies and some exchanges have sought out and received official Sharia approval.
-                  What's the rationale for accepting cryptocurrencies - or any digital payments at all?
-                </p>
-                <p>
-                  In <a href="http://dailyanarchist.com/2013/01/30/is-bitcoin-sharia-compliant/">a post by Davi Barker</a> in January 2013,
-                  the earliest Shariah analysis I could find on Bitcoin:
-                  <blockquote>
-                    Imran Hosein identifies six traits common to all of these that amount to a definition of money in Islam.
-                    <ul>
-                      <li>Money is either precious metals or food.</li>
-                      <li>Money is abundant and freely available.</li>
-                      <li>Money is durable and does not spoil or corrode.</li>
-                      <li>Money has intrinsic value.</li>
-                      <li>Money exists in creation and is made valuable by God.</li>
-                      <li>Money functions as a medium exchange.</li>
-                    </ul>
-                  </blockquote>
-                  Digital currencies were, of course, not anticipated by early religious scholars.
-                  What is the reasoning behind limiting currencies to precious metals, and avoiding
-                  more common resources?
-                </p>
-                <p>
-                  Barker continues:
-                  <blockquote>
-                    His objection to sand and paper is not that they are not metal or food, but that
-                    they have no intrinsic value... [value must be] determined by supply and demand,
-                    and not artificially assigned by central planners.
-                  </blockquote>
-                  A digital currency such as Bitcoin, which derives its value from a limited supply,
-                  energy acquisition costs, and global acceptance, can hold the digital equivalent of the gold standard.
-                </p>
-                <p>
-                  Later in 2013, <a href="https://cryptoinsider.com/cryptocurrency-islamic-financial-markets/">CryptoInsider reported</a>
-                  a warning from Professor Ahamed Kameel Mydin Meera, that any digital currency must be backed by a traditional currency:
-                  <blockquote>
-                    For a digital currency to be accepted by Islamic Finance, it needs to have a measure of value, necessarily
-                    the measure of value has to be a monetary commodity. You have to put a standard weight on paper notes or electronic
-                    currencies to be accepted.
-                  </blockquote>
-                  By "standard weight" the professor is referring to a gold dinar, based on coins that circulated in early Islamic history.
-                  Entrepreneurs inspired by this argument have made at least two Sharia-compliant
-                  currencies based on the price of gold (<i>see more in the Stablecoins section</i>).
+                  This is a wallet file, paper wallet, or app which combined with the passcode in your memory, can restore access to your wallet and keys. It's important to use a long password/passphrase and an app that you trust.
                 </p>
 
-                <h4>How does cryptography protect a currency?</h4>
+                <h4>Exchanges</h4>
+
+                <h4>Smart Contracts</h4>
                 <p>
-                  When you use a credit card, both sides trust that their bank is debiting and crediting the right accounts.
-                  That trust takes a great deal of technical, organizational, and regulatory work by the bank, and when that trust fails, people
-                  resort to less convenient but more immediately transferable options, such as cash, gold, or trade.
+                  Smart contracts are programs which accompany an address on a blockchain. Bitcoin contained a limited programming interface, which developers experimented with for escrow accounts and other simple financial programs. Later, Ethereum was created with a focus on distributed computing and more feature-rich languages to write these programs.
                 </p>
                 <p>
-                  Cryptocurrency is an attempt to combine the immediate transferability of cash in your pocket, with the security and precision
-                  of the modern digital world.
+                  Consider a Co-Op Payroll contract. The contract is associated with an address where the company receives all of its profits. One Manager can add and remove Members and set their share of the profit. Every payday, the contract distributes its money.
+                  It's not clear why a co-op chose a smart contract in place of a conventional payroll, but I can think of some potential benefits:
+
+                  <ul>
+                    <li>profits and salaries are always transparent</li>
+                    <li>maybe the Co-Op's customers / clients pay in cryptocurrency</li>
+                    <li>maybe the Members want to be paid in cryptocurrency or have no bank account</li>
+                    <li>the Manager might be restricted in some way by the contract (for example, Members receive a final paycheck after being removed)</li>
+                  </ul>
+
+                  Smart contracts can be coded in different languages which compile to a common bytecode before entering the blockchain. This eBook will cover Solidity (the most common one, based on JavaScript), Tron, Python one, NeoPython.
+                  There are several more languages and more being created; but the principles in the book should be consistent for some time.
+
+                  Zeppelin is a platform for rolling out changes to a contract / upgrading / security.
+                </p>
+
+                <h4>Gas</h4>
+                <p>
+                  Ethereum and some other smart contract platforms add another fee: "gas". You'll recall that smart contracts' code are seen and run by every node in the network to verify their outcomes. To discourage users from overusing the network's computation power and storage, and to compensate miners, gas is applied to smart contract transactions. The amount of gas will vary by contract and depend on the needs of your program. ​https://twitter.com/RyanSAdams/status/1135939981799841793 upcoming Ethereum changes will reduce gas?
+                </p>
+
+                <h4>ERCs</h4>
+                <p>
+                  Ethereum contracts are programs, so it could be difficult for a non-programmer to sit down and interpret it directly. Every contract could be a different app with different rules.
                 </p>
                 <p>
-                  In fact cryptocurrency can make more secure payments by advancements in public-key cryptography.
-                  Each user has a keypair with one private key (kept secret) and one public key (shared publicly) which are closely related.
-                  Alice can 'sign' a message with her private key, and anyone can verify Alice's signature with her public key.
-                  Alice may have a password protecting her private key, but the private key itself provides security
-                  (2^xxx chance of guessing). Both sides can use the data in the transfer to verify it for themselves and see it
-                  permanently recorded in the blockchain.
+                  ERC are numbered proposals which set up a common interface for contracts. Returning to the Co-op Payroll example, suppose that many employers are using this method for onboarding new employees and paying them. Every company has their own contract with their own employees and profit system, but the contracts follow one standard. It would be good to post and name that standard such that apps can be made. A real example of ERC would be ? for identity. Several apps use this as a connection between your Ethereum wallet and a website account.
+                </p>
+
+                <h4>Tokens</h4>
+                <p>
+                  Smart contracts allow users to mint, distribute, and sell their own currencies which are called "tokens". The base contract for many tokens is ERC20, but many later ERCs have expanded on this. If a token is issued compatible with ERC20, you can store it and make transactions from several wallets. There now are secondary markets and exchanges for tokens.
+                </p>
+                <p>
+                  Unlike cryptocurrencies themselves, which have a future supply and distribution plan for miners, you can theoretically create and distribute as many tokens as you want, from nothing. Unfortunately, you won't become a trillionaire by creating billions of tokens and selling them for $1,000 each. For buy-in, you must find an application for using and/or selling these tokens -  something which makes users value them.
+                </p>
+                <p>
+                  Suppose your bakery creates a Crypto Cupcake. As the orders come in, people start asking for gift certificates for their friends, classmates, and coworkers.  You could make a batch of 10,000 Gift-Tokens and sell them at your standard price.  As long as your store remains open, the store can accept tokens as payment, and you have cupcakes to satisfy demand, the tokens will retain value.  In this case we don't expect a secondary market of
+                  cupcakes, but stranger things have happened.
+                </p>
+
+                <h4>ICOs</h4>
+                <p>
+                  An Initial Coin Offering (ICO) is the cryptocurrency equivalent of an Initial Public Offering (IPO).  It's a blanket term for the first sales of a new cryptocurrency or a token on an existing blockchain. Companies may use favorable pricing or rewards to encourage professional investors, exchanges, and individual users to invest in the ICO - allowing the company to have cash and cryptocurrency reserves to continue operations.
+                </p>
+                <p>
+                  After a boom in ICOs in 2017, and many projects ending in failures or losses, the number of new ICOs has dwindled. This isn't necessarily a flaw in using an ICO to raise money, but they had become weighed down by several which turned out to be poorly designed, misleading, get-rich-quick schemes, or outright fraud (exit scams).
+                </p>
+                <p>
+                  The US SEC produced a website [fake ICO] mimicking the typical layout of an ICO announcement, and warning individuals not to be persuaded.
+                </p>
+
+                <h4>Howey Test and the SEC</h4>
+                <p>
+                  The SEC had other concerns with ICOs. After the DAO project raised funds from crowdfunding investors without oversight, the SEC issued a report (the DAO report) describing the relation between cryptocurrencies and securities.
+                </p>
+                programmers can control what does and doesnt appear on site: https://www.nytimes.com/2016/05/28/business/dealbook/paper-points-up-flaws-in-venture-fund-based-on-virtual-money.html
+                <p>
+                  It may be that the DAO was a clever way to publicize and fund an Internet-of-Things startup. It might also be a forerunner of other autonomous, potentially-illegal corporations.  Though Bitcoin and Ethereum appear to be permitted as currencies or commodities, many ICOs and tokens are classified as SECURITIES, which cannot be sold without careful legal compliance and public disclosures. The gold standard for determining whether a token is a security is THE DAO REPORT and THE HOWIE TEST. The SEC's decisions are followed closely because even though cryptocurrencies and smart contracts CAN operate against government regulations, it is exceedingly difficult to appeal to users and use the funds while maintaining anonymity. If your program has any connection to the non-crypto world (a legal entity, a bank account, a public website, real identities of leaders, directors, or employees) then this is enough to risk being shut down. Only a few websites can inspire investor or customer confidence with this level of secrecy. Gambling and other websites (Silk Road) have managed it, but ultimately were shut down for breaking other US laws.
+                </p>
+
+                <p>
+                  A 2019 lawsuit filed by the SEC against Kik messenger illustrates many issues with launching a non-compliant cryptocurrency with public appeals to American investors.
+                </p>
+
+                <h4>IEOs</h4>
+                <p>
+                  An Initial Exchange Offering (IEO) is one evolution of the ICO model.
+                </p>
+
+                <h4>EIPs</h4>
+
+                <h4>Social Media Essentials</h4>
+                <h5>HODL</h5>
+                <p>
+                  A common meme in the cryptocurrency world is 'HODL' (a misspelling of HOLD), the idea being to hold, and not hastily sell, one's Bitcoin when the price rises or falls. The goal of a HODL-er is to wait for their Bitcoin to be much more valuable, or to be accepted everywhere as a new currency. This HODL joke is carried forward, for example 'BUIDL' for building Ethereum DApps.
+                </p>
+                <h5>Bitcoin Maximalists</h5>
+                <p>
+                  Some Bitcoin users are convinced that no other national currency, cryptocurrency or fork will rival the original Bitcoin in terms of value, utility, and reliability in the long run. Under that belief, they reject any other cryptocurrency.
+                </p>
+                <p>
+                  These 'Bitcoin maximalists' have a point, as Bitcoin is the oldest and most-mined cryptocurrency available. In an appearance in front of a Congress committee discussing Facebook and the Libra cryptocurrency, Congressman [?] mentioned that altcoins were sometimes called "s--tcoins", a term often used by Bitcoin maximalists.
+                </p>
+                <h5>Scams</h5>
+                <p>
+                  Many scammers reply to cryptocurrency posts on Twitter and other social networks. They use the profile photo, name, and screenshots to pretend to be the original poster, a cryptocurrency founder or celebrity, or an ordinary user who received money through a drawing or giveaway. In some cases they will hack a verified account or use special Unicode characters to look just like a celebrity (they often impersonate Elon Musk or Ethereum founder Vitalik Buterin).
+                </p>
+                <p>
+                  Never send cryptocurrency to anyone promising a free giveaway or multiplier. There is no way to recover sent funds. Take caution with a stranger's recommended currency or token if their deal seems 'too good to be true' or it is pitched as a 'limited time offer'.
                 </p>
               </section>
             </div>
