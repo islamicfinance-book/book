@@ -427,60 +427,6 @@ India is the largest country not yet represented with a stablecoin, in part beca
 
                   Within the Islamic finance world, I'm hopeful that it can encourage wealthy Muslims to pay zakat and charitable loans (__ el hassan?) toward causes which they can know are transparent, and not being cheated or grifted by middlemen along the way. The difficulties of cross-border payments will melt away. New economies and opportunities will emerge for exchanges in local currencies, from Somaliland shillings to Bangla __?
                 </p>
-
-                <h4>Mudaraba Contracts</h4>
-                <p>
-                  A common profit-sharing contract in Islamic finance is mudaraba. An investor and an entrepreneur invest their resources — suppose that the investor puts up 70% of the startup capital. Profits from the business are divided 70/30 until the investor is repaid, after which they often offer a more favorable rate (suppose 50/50) to incentivize the entrepreneur to pay back the loan.
-
-                  A smart contract would define the expected inputs and outputs in computer code.
-
-                  Profit-sharing requires businesses to maintain accounting books (possibly for the first time). If a mudaraba account can send and receive payments, its record on the blockchain would serve as a transparent ledger, and it would never have a negative balance.
-
-                  Smart contracts could potentially make Islamic finance successful, but millions of dollars have been lost to code exploits or wallets terminated by unauthorized users. Privately I had been sketching out designs for a language or IDE which would divide your code into classes of
-                  users, but I didn’t have the necessary background knowledge on compilers.
-
-                  <strong>Enter Flint</strong>
-                  In May 2018 the Ethereum Foundation gave grants to several promising projects, including $10k to Flint language for smart contracts. Flint restricts users and mutating functions on a language level, and its compiler is written in Swift. You can read more about it here:
-                  Flint: A New Language for Safe Smart Contracts on Ethereum
-                  To explore the language, I decided to represent a mudaraba (a common contract from Islamic finance and microfinance) in Flint.
-
-                  <strong>Basics of Mudaraba</strong>
-                  A mudaraba is a type of musharaka (profit-sharing contract) which provides capital to a business. The lender and business owner both invest in the success of the business:
-                  ~ If the investment loses money, the loss is split proportionally to the initial investment. It’s easy to remember by thinking what would happen in a 100% loss.
-                  ~ If the investment is profitable, those profits are split according to an agreed ratio. Lenders will incentivize the business owner, and compete with each other, by offering a greater share of profits. For example, a 80–20 partnership may agree to split profits 70–30. In any case, the success of the investment depends on reliable accounting, which typically involves more overhead and complexity (potentially another crypto solution?).
-                  ~ Unlike other types of musharaka, a mudaraba lender is typically a “silent partner” and not deeply involved in business decisions.
-                  ~ There are additional rules about adjusting the profit ratio and mutual decisions to end the contract, but I don’t want to code everything at once. For this example, we have a fixed profit ratio and either side can end the contract at any time.
-
-                  <strong>Initial Structure</strong>
-                  There are contract instance variables, and blocks which
-                  contain multiple functions.
-
-                  <strong>What any user can do</strong>
-                    Initializing a contract happens in the (any) block, because no bank or business address has been set yet. An @ payable function is called when money is paid in, in case you have the smart contract reacting to that.
-                    I debated about when the bank/business profit share should be set. In the initial step, neither side has invested funds, but they also want to make sure it’s a trustable contract.
-                    ~ if the owner does not invest satisfactory funds or takes time to invest for some reason, the bank can delay calling start() of the contract, or cancel()
-                    ~ if the bank does not set the promised profit ratio, or invest satisfactory funds, the owner can cancel() or not move funds into the contract
-
-                  <strong>What business owners can do </strong>
-                  I want to allow multiple payments into the investment
-                  wallet, but the owner shouldn’t be allowed to change the initial investment after the contract has started. Cryptocurrencies don’t have an option to reject or return-to-sender payments, so in a more resilient contract, maybe this balance could be stored in a variable, or there could be a reclaim function.
-
-                  <strong>What banks can do </strong>
-                  I’ve created a separate function name investFromBank to avoid conflict with the investFromBusiness function. I’ve also prevented the bank from changing its initial investment.
-
-                  <strong>The contract closing function </strong>
-                  This is the calculation which matters most; canceling or closing the contract with distributed profits. Here I am relying on code in the “future” directory of Flint, so don’t depend on it.
-                  In event of the contract closing before it started, I direct to return initial investments.
-                  Whenever the contract is closed there would be gas and
-                  transaction fees, but I believe that the bank is in the right to charge the client for these fees; in Islamic finance this is permissible even in Qard al-Hassan benevolent loans.
-
-                  <strong>Compiling the contract </strong>
-                  Does any of this work yet? The Flint language repo comes with a Dockerfile where you can start compiling contracts to Ethereum-friendly bytecode. By adding and subtracting pieces, and referring to future docs, I corrected the code which you currently see here.
-
-                  Currently I cannot get “send” into compiling code, and that might be a good thing — I would like to see a more specific keyword for emptying the account. I’m not sure how to check the current balance without recording it in an instance variable (Solidity’s deprecated this.balance and newer address-casting-then-balance methods didn’t work). Also I didn’t get a chance to see how the percentage calculation works. [fix: track balance]
-
-
-                </p>
               </section>
             </div>
           </div>

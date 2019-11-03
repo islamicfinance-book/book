@@ -369,10 +369,14 @@
                 <a name="contracts"></a>
                 <h4>Smart Contracts</h4>
                 <p>
-                  Smart contracts are programs which accompany an address on a blockchain. Bitcoin contained a limited programming interface, which developers experimented with for escrow accounts and other simple financial programs. Later, Ethereum was created with a focus on distributed computing and more feature-rich languages to write these programs.
+                  Smart contracts are programs which accompany an address on a blockchain.
+                  Bitcoin contained a limited programming interface, which developers experimented with for escrow accounts and other simple financial programs.
+                  Later, Ethereum was created with a focus on distributed computing and more feature-rich languages to write these programs.
                 </p>
                 <p>
-                  Consider a Co-Op Payroll contract. The contract is associated with an address where the company receives all of its profits. One Manager can add and remove Members and set their share of the profit. Every payday, the contract distributes its money.
+                  Consider a Payroll contract. The contract is associated with an address where a co-op receives
+                  all of its profits. One Manager can add and remove Members and set their share of the profit. Every payday,
+                  the contract distributes its money.
                   It's not clear why a co-op chose a smart contract in place of a conventional payroll, but I can think of some potential benefits:
 
                   <ul>
@@ -382,7 +386,8 @@
                     <li>the Manager might be restricted in some way by the contract (for example, Members receive a final paycheck after being removed)</li>
                   </ul>
 
-                  Smart contracts can be coded in different languages which compile to a common bytecode before entering the blockchain. This eBook will cover Solidity (the most common one, based on JavaScript), Tron, Python one, NeoPython.
+                  Smart contracts can be coded in different languages which compile to a common bytecode before entering the blockchain.
+                  This eBook will cover Solidity (the most common one, based on JavaScript), and potentially a Python variant.
                   There are several more languages and more being created; but the principles in the book should be consistent for some time.
 
                   Zeppelin is a platform for rolling out changes to a contract / upgrading / security.
@@ -390,38 +395,58 @@
 
                 <h4>Gas</h4>
                 <p>
-                  Ethereum and some other smart contract platforms add another fee: "gas". You'll recall that smart contracts' code are seen and run by every node in the network to verify their outcomes. To discourage users from overusing the network's computation power and storage, and to compensate miners, gas is applied to smart contract transactions. The amount of gas will vary by contract and depend on the needs of your program. ​https://twitter.com/RyanSAdams/status/1135939981799841793 upcoming Ethereum changes will reduce gas?
+                  Ethereum and some other smart contract platforms add another fee: "gas".
+                  Smart contract code is seen and run by every node in the network to verify its outcome.
+                  To discourage users from overusing the network's computation power and storage, and to compensate miners, a gas fee is applied to smart contract transactions.
+                  The amount of gas will depend on the needs of your program.
+                  ​https://twitter.com/RyanSAdams/status/1135939981799841793 upcoming Ethereum changes will reduce gas?
                 </p>
 
                 <h4>ERCs</h4>
                 <p>
-                  Ethereum contracts are programs, so it could be difficult for a non-programmer to sit down and interpret it directly. Every contract could be a different app with different rules.
+                  Ethereum contracts are programs, so it could be difficult for a non-programmer to sit down and interpret it directly.
+                  Every contract could be a different app with different rules.
                 </p>
                 <p>
-                  ERC are numbered proposals which set up a common interface for contracts. Returning to the Co-op Payroll example, suppose that many employers are using this method for onboarding new employees and paying them. Every company has their own contract with their own employees and profit system, but the contracts follow one standard. It would be good to post and name that standard such that apps can be made. A real example of ERC would be ? for identity. Several apps use this as a connection between your Ethereum wallet and a website account.
+                  ERC are numbered proposals which set up a common interface for contracts. Returning to the Co-op Payroll example,
+                  suppose that many employers are using this method for onboarding new employees and paying them. Every company has their own contract with their own employees and profit system,
+                  but the contracts follow one standard. It would be good to post and name that standard such that generic apps can be made.
+                  A real example of ERC would be ? for identity. Several apps use this as a common interface between your Ethereum wallet and a website account.
                 </p>
 
                 <h4>Tokens</h4>
                 <p>
-                  Smart contracts allow users to mint, distribute, and sell their own currencies which are called "tokens". The base contract for many tokens is ERC20, but many later ERCs have expanded on this. If a token is issued compatible with ERC20, you can store it and make transactions from several wallets. There now are secondary markets and exchanges for tokens.
+                  Smart contracts allow users to mint, distribute, and sell their own currencies which are called "tokens".
+                  The base contract for many tokens is ERC20, but many later ERCs have expanded on this.
+                  If a token is issued compatible with ERC20, you can store it and make transactions from several wallets.
+                  There now are secondary markets and exchanges for tokens.
                 </p>
                 <p>
-                  Unlike cryptocurrencies themselves, which have a future supply and distribution plan for miners, you can theoretically create and distribute as many tokens as you want, from nothing. Unfortunately, you won't become a trillionaire by creating billions of tokens and selling them for $1,000 each. For buy-in, you must find an application for using and/or selling these tokens -  something which makes users value them.
+                  Unlike cryptocurrencies themselves, which have a future supply and distribution plan for miners, you can theoretically
+                  create and distribute as many tokens as you want, from nothing.
+                  Unfortunately, you won't become a trillionaire by creating billions of tokens and selling them for $1,000 each.
+                  For buy-in, you should find an application for using and/or selling your tokens - something which makes users value them.
                 </p>
                 <p>
-                  Suppose your bakery creates a Crypto Cupcake. As the orders come in, people start asking for gift certificates for their friends, classmates, and coworkers.  You could make a batch of 10,000 Gift-Tokens and sell them at your standard price.  As long as your store remains open, the store can accept tokens as payment, and you have cupcakes to satisfy demand, the tokens will retain value.  In this case we don't expect a secondary market of
-                  cupcakes, but stranger things have happened.
+                  Suppose your bakery creates a Crypto Cupcake. As the orders come in, people start asking for gift certificates for their friends,
+                  classmates, and coworkers.  You could make a batch of 10,000 Gift-Tokens and sell them at your standard price.
+                  As long as your store remains open, the store can accept tokens as payment, and you have cupcakes to satisfy demand,
+                  the tokens will retain value.  In this case we don't expect a secondary market of cupcakes, but stranger things have happened.
                 </p>
 
                 <h4>ICOs</h4>
                 <p>
-                  An Initial Coin Offering (ICO) is the cryptocurrency equivalent of an Initial Public Offering (IPO).  It's a blanket term for the first sales of a new cryptocurrency or a token on an existing blockchain. Companies may use favorable pricing or rewards to encourage professional investors, exchanges, and individual users to invest in the ICO - allowing the company to have cash and cryptocurrency reserves to continue operations.
+                  An Initial Coin Offering (ICO) is the cryptocurrency equivalent of an Initial Public Offering (IPO).
+                  It's a blanket term for the first sales of a new cryptocurrency or a token on an existing blockchain.
+                  Companies may use favorable pricing or rewards to encourage professional investors, exchanges, and individual users to invest in the ICO - allowing the company to have cash and cryptocurrency reserves to continue operations.
                 </p>
                 <p>
-                  After a boom in ICOs in 2017, and many projects ending in failures or losses, the number of new ICOs has dwindled. This isn't necessarily a flaw in using an ICO to raise money, but they had become weighed down by several which turned out to be poorly designed, misleading, get-rich-quick schemes, or outright fraud (exit scams).
+                  After a boom in ICOs in 2017, and many projects ending in failures or losses, the number of new ICOs has dwindled.
+                  This isn't necessarily a flaw in using an ICO to raise money, but they had become weighed down by several which turned out to be poorly designed, misleading, get-rich-quick schemes, or outright fraud (exit scams).
                 </p>
                 <p>
-                  The US SEC produced a website [fake ICO] mimicking the typical layout of an ICO announcement, and warning individuals not to be persuaded.
+                  The US SEC produced a website mimicking the typical layout of an ICO announcement, and warning individuals not to be persuaded.
+                  https://www.howeycoins.com/index.html
                 </p>
 
                 <h4>Howey Test and the SEC</h4>
@@ -430,7 +455,16 @@
                 </p>
                 programmers can control what does and doesnt appear on site: https://www.nytimes.com/2016/05/28/business/dealbook/paper-points-up-flaws-in-venture-fund-based-on-virtual-money.html
                 <p>
-                  It may be that the DAO was a clever way to publicize and fund an Internet-of-Things startup. It might also be a forerunner of other autonomous, potentially-illegal corporations.  Though Bitcoin and Ethereum appear to be permitted as currencies or commodities, many ICOs and tokens are classified as SECURITIES, which cannot be sold without careful legal compliance and public disclosures. The gold standard for determining whether a token is a security is THE DAO REPORT and THE HOWIE TEST. The SEC's decisions are followed closely because even though cryptocurrencies and smart contracts CAN operate against government regulations, it is exceedingly difficult to appeal to users and use the funds while maintaining anonymity. If your program has any connection to the non-crypto world (a legal entity, a bank account, a public website, real identities of leaders, directors, or employees) then this is enough to risk being shut down. Only a few websites can inspire investor or customer confidence with this level of secrecy. Gambling and other websites (Silk Road) have managed it, but ultimately were shut down for breaking other US laws.
+                  It may be that the DAO was a clever way to publicize and fund an Internet-of-Things startup.
+                  It might also be a forerunner of other autonomous, potentially-illegal corporations.
+                  Though Bitcoin and Ethereum appear to be permitted as currencies or commodities, many ICOs and tokens are classified as SECURITIES,
+                  which cannot be sold without careful legal compliance and public disclosures.
+                  The standard for determining whether a token is a security is THE DAO REPORT and THE HOWIE TEST.
+                  The SEC's decisions are followed closely because even though cryptocurrencies and smart contracts CAN operate in other countries or without complying with regulations,
+                  it is exceedingly difficult to appeal to users and use the funds while maintaining anonymity.
+                  If your program has any connection to the non-crypto world (a legal entity, a bank account, a public website, real identities of leaders, directors, or employees)
+                  then this is enough to risk being shut down. Only a few websites can inspire investor or customer confidence with this level of secrecy.
+                  Gambling and drug marketplaces have managed it, but ultimately were shut down for breaking other US laws.
                 </p>
 
                 <p>
@@ -455,7 +489,7 @@
                   Some Bitcoin users are convinced that no other national currency, cryptocurrency or fork will rival the original Bitcoin in terms of value, utility, and reliability in the long run. Under that belief, they reject any other cryptocurrency.
                 </p>
                 <p>
-                  These 'Bitcoin maximalists' have a point, as Bitcoin is the oldest and most-mined cryptocurrency available. In an appearance in front of a Congress committee discussing Facebook and the Libra cryptocurrency, Congressman [?] mentioned that altcoins were sometimes called "s--tcoins", a term often used by Bitcoin maximalists.
+                  These 'Bitcoin maximalists' have a point, as Bitcoin is the oldest and most-mined cryptocurrency available. In a US Congress committee discussion about Facebook and the Libra cryptocurrency, Congressman Warren Davidson (https://www.youtube.com/watch?v=vf1dym16poc) mentioned that altcoins were sometimes called "s--tcoins", a term often used by Bitcoin maximalists.
                 </p>
                 <h5>Scams</h5>
                 <p>
