@@ -2,8 +2,14 @@ SCAMS / Skepticism / irreversible
   exit scam CEO disappeared dead in India: https://www.nytimes.com/2019/02/05/business/quadriga-cx-gerald-cotten.html
 
 REGULATIONS
+
 Lightning / International cross border / failed state
   https://www.coindesk.com/venezuelans-made-lightning-savvy-hardware-to-use-bitcoin-during-blackouts?utm_source=twitter&utm_medium=coindesk&utm_term=&utm_content=&utm_campaign=Organic%20
+  There doesn't need to be a lack of apps or banks for crypto to be an alternative
+  people are always looking for apps with better ease-of-use, lower fees, potentially
+  something local-based
+Indonesia
+  https://www.salaamgateway.com/story/with-finance-at-the-core-indonesias-action-plan-for-development-of-integrated-islamic-economy-to-go-
 Argentina
   https://www.bloomberg.com/news/articles/2019-10-28/argentina-tightens-currency-controls-after-fernandez-victory
 Bahamas central bank, disaster recovery
@@ -40,8 +46,13 @@ Crypto loans
   https://www.forbes.com/sites/youngjoseph/2019/10/30/crypto-sentiment-on-the-rise-quarterly-stablecoin-loans-surge-38-to-870m/#beb964d25654
   https://www.nuo.network/
   https://celsius.network/
+  DAI ? https://twitter.com/nanexcool/status/1193895823022739457
+  multi-holder accounts in general
+
+Smart Sukuk / Blossum
 
 Moved of corporations, conventional finance, FinTech, Islamic FinTech
+https://www.katherinewu.me/writings/2019/9/30/dissecting-the-blockone-settlement-with-the-sec
   worth noting Norwegian, Kik, others go to crypto when they have difficulty with conventional fundraising
   Uber into banking https://www.cnbc.com/2019/10/28/uber-announces-deeper-push-into-financial-services-with-uber-money.html
   Bitcoin flight with Norwegian air https://www.forbes.com/sites/martinrivers/2019/08/12/revealed-how-norwegian-air-is-giving-wings-to-bitcoin/#1a92c5e7e182
@@ -56,10 +67,19 @@ New Stuff
   IEO goes in?
   3rd party watch network https://twitter.com/paddypisa/status/1181857410136166401
   Sidechains https://twitter.com/gakonst/status/1146793685545304064
+  new in zksnarks https://medium.com/@ronaldmannak_1825/comparing-general-purpose-zk-snarks-51ce124c60bd
 
 Tokens
+  Token sponsor: https://medium.com/uma-project/build-with-synthetic-asset-tokens-at-ethwaterloo-9410a9e60f06
+    via https://www.notion.so/umaproject/Poop-Exchange-Tokens-to-track-shit-sightings-in-SF-e1dbb976cb6e4d46b6382859bda9bfb4
+  Coinbase guide https://blog.coinbase.com/intro-to-smart-contracts-f436b1ac2bb8
   Telegram vs. SEC https://www.sec.gov/news/press-release/2019-212
   Kik response to SEC DefendCrypto.org
+    https://www.scribd.com/document/420996750/2019-08-06-Answer-dckt-22-0
+
+IFANCA - food in USA / China site
+Bitcoin as policy: https://podcasts.apple.com/us/podcast/the-what-bitcoin-did-podcast/id1317356120?i=1000454868259
+https://player.fm/series/encrypted-2413528
 
 AntiPoverty / Disaster Relief
   NuruCoin (discontinued) but agtech https://www.capitalfm.co.ke/business/2018/02/nairobi-based-entrepreneur-invests-sh15mn-to-develop-africas-bitcoin/
@@ -111,6 +131,15 @@ https://www.forbes.com/sites/billybambrough/2019/08/15/new-samsung-galaxy-s10-an
 https://afroasiafintech.net/festival-speakers.php
 People have made money on "altcoins", but these have a tendency to rise and collapse without warning (similar to "penny stocks"), and are more easily manipulated by mining companies or larger investors.
 Near East Foundation, NYC, sukuk fund
+
+https://thenextweb.com/hardfork/2019/11/05/oxfam-ethereum-blockchain-microinsurance-sri-lanka-claims-payouts/
+Substack authors + crypto payments https://twitter.com/wheatpond/status/1192559015697534977
+Lightning network widget https://ion.radar.tech/redshift
+Chat app with tokens https://twitter.com/SenseChat
+Northern Ireland suggestion
+Faucet: https://twitter.com/wheatpond/status/1192600314379210753
+Aragon leaving Ether - https://twitter.com/notgrubles/status/1191507467240460290 - moving to Stratis?
+UK+Europe IF banking dev policies, personal + home vs. commercial banking: https://twitter.com/OMFIF/status/1166723894130237441
 
 Connections
 https://twitter.com/koibanx/status/995407884988092421
