@@ -149,89 +149,67 @@
                 <p>
                   The most common programming language for Ethereum contracts is Solidity, a JavaScript-inspired (but still distinct) programming language.
                   There is an ecosystem of tools for IDEs (such as <a href="https://remix.ethereum.org/">Remix</a>),
-                  testing (such as <a href="https://www.trufflesuite.com/">Truffle</a>),
-                  and static analysis for security.
+                  testing (such as <a href="https://www.trufflesuite.com/">Truffle</a>).
+                  <br/>
+                  Mainstream alternatives to Solidity are regularly funded by the Ethereum Foundation.
+                  Examples include <a href="https://github.com/ethereum/vyper">Vyper</a> (similar to Python)
+                  <a href="https://github.com/flintlang/flint">Flint</a>,
+                  and <a href="https://0x.org/docs/tools/0x.js/v9.2.0">0x.js</a>.
                 </p>
                 <p>
-                  Much research into smart contracts is invested into improving Solidity, particularly on securing key functions and avoiding unanticipated consequences.
-
-                  Flint lang (getting updates again: https://github.com/flintlang/flint) Another language is Vyper, a Pythonic https://github.com/ethereum/vyper https://github.com/CityOfZion/neo-python Microsoft Azure, Amazon Web Services (AWS), and Google Cloud all have cloud services which can help developers with Ethereum blockchain apps. https://webln.dev/#/ smart contract honeypots https://github.com/thec00n/smart-contract-honeypots https://medium.com/0x-project/announcing-0x-js-30dff30b10f https://o1labs.org/blog/posts/snarky.html Ethereum from scratch: Part 1: Ping https://news.ycombinator.com/item?id=14816008
+                  Much research into smart contracts is invested into improving Solidity,
+                  particularly on authorization/authentication of users before executing contract functions,
+                  or finding unexpected outcomes of running code (static analysis).
                 </p>
 
-                <h4>Mudaraba Contracts</h4>
+                <h4>A Sample Islamic Finance Contract</h4>
                 <p>
                   A common profit-sharing contract in Islamic finance is mudaraba. An investor and an entrepreneur invest their resources — suppose that the investor puts up 70% of the startup capital. Profits from the business are divided 70/30 until the investor is repaid, after which they often offer a more favorable rate (suppose 50/50) to incentivize the entrepreneur to pay back the loan.
-
+                </p>
+                <p>
                   A smart contract would define the expected inputs and outputs in computer code.
-
+                  <br/>
                   Profit-sharing requires businesses to maintain accounting books (possibly for the first time). If a mudaraba account can send and receive payments, its record on the blockchain would serve as a transparent ledger, and it would never have a negative balance.
-
-                  Smart contracts could potentially make Islamic finance successful, but millions of dollars have been lost to code exploits or wallets terminated by unauthorized users. Privately I had been sketching out designs for a language or IDE which would divide your code into classes of
-                  users, but I didn’t have the necessary background knowledge on compilers.
-
-                  <strong>Enter Flint</strong>
-                  In May 2018 the Ethereum Foundation gave grants to several promising projects, including $10k to Flint language for smart contracts. Flint restricts users and mutating functions on a language level, and its compiler is written in Swift. You can read more about it here:
-                  Flint: A New Language for Safe Smart Contracts on Ethereum
-                  To explore the language, I decided to represent a mudaraba (a common contract from Islamic finance and microfinance) in Flint.
-
-                  <strong>Basics of Mudaraba</strong>
-                  A mudaraba is a type of musharaka (profit-sharing contract) which provides capital to a business. The lender and business owner both invest in the success of the business:
-                  ~ If the investment loses money, the loss is split proportionally to the initial investment. It’s easy to remember by thinking what would happen in a 100% loss.
-                  ~ If the investment is profitable, those profits are split according to an agreed ratio. Lenders will incentivize the business owner, and compete with each other, by offering a greater share of profits. For example, a 80–20 partnership may agree to split profits 70–30. In any case, the success of the investment depends on reliable accounting, which typically involves more overhead and complexity (potentially another crypto solution?).
-                  ~ Unlike other types of musharaka, a mudaraba lender is typically a “silent partner” and not deeply involved in business decisions.
-                  ~ There are additional rules about adjusting the profit ratio and mutual decisions to end the contract, but I don’t want to code everything at once. For this example, we have a fixed profit ratio and either side can end the contract at any time.
-
-                  <strong>Initial Structure</strong>
-                  There are contract instance variables, and blocks which
-                  contain multiple functions.
-
+                </p>
+                <p>
+                  Let's think about the structure of the contract and permissions:
+                  <br/>
                   <strong>What any user can do</strong>
-                    Initializing a contract happens in the (any) block, because no bank or business address has been set yet. An @ payable function is called when money is paid in, in case you have the smart contract reacting to that.
-                    I debated about when the bank/business profit share should be set. In the initial step, neither side has invested funds, but they also want to make sure it’s a trustable contract.
-                    ~ if the owner does not invest satisfactory funds or takes time to invest for some reason, the bank can delay calling start() of the contract, or cancel()
-                    ~ if the bank does not set the promised profit ratio, or invest satisfactory funds, the owner can cancel() or not move funds into the contract
+                  <br/>
+                    Initializing a contract is available to any user. We establish the rules of the contract
+                    and invite both bank and entrepreneur to make their investment.
+                    <ul>
+                      <li>if the owner does not invest satisfactory funds or takes time to invest for some reason, the bank can delay calling <code>start()</code> of the contract, or <code>cancel()</code></li>
+                      <li>if the bank does not set the promised profit ratio, or invest satisfactory funds, the owner can <code>cancel()</code> or not move funds into the contract</li>
+                    </ul>
+                  <br/>
 
-                  <strong>What business owners can do </strong>
+                  <strong>What only business owners can do </strong>
+                  <br/>
                   I want to allow multiple payments into the investment
-                  wallet, but the owner shouldn’t be allowed to change the initial investment after the contract has started. Cryptocurrencies don’t have an option to reject or return-to-sender payments, so in a more resilient contract, maybe this balance could be stored in a variable, or there could be a reclaim function.
+                  wallet, but the owner shouldn’t be allowed to change the initial investment after the contract has started.
+                  Cryptocurrencies don’t have an option to reject or return-to-sender payments, so the start-time balance should be stored in a variable, and anything after
+                  start should be sent to the correct account.
+                  <br/>
+                  Payments to the store go directly into this shared account, and cannot be withdrawn.
+                  <br/>
 
-                  <strong>What banks can do </strong>
-                  I’ve created a separate function name investFromBank to avoid conflict with the investFromBusiness function. I’ve also prevented the bank from changing its initial investment.
+                  <strong>What only banks can do </strong>
+                  <br/>
+                  The bank makes an initial investment. They cannot change the ratio after running <code>start()</code>
 
+                  <br/>
                   <strong>The contract closing function </strong>
-                  This is the calculation which matters most; canceling or closing the contract with distributed profits. Here I am relying on code in the “future” directory of Flint, so don’t depend on it.
-                  In event of the contract closing before it started, I direct to return initial investments.
-                  Whenever the contract is closed there would be gas and
-                  transaction fees, but I believe that the bank is in the right to charge the client for these fees; in Islamic finance this is permissible even in Qard al-Hassan benevolent loans.
-
-                  <strong>Compiling the contract </strong>
-                  Does any of this work yet? The Flint language repo comes with a Dockerfile where you can start compiling contracts to Ethereum-friendly bytecode. By adding and subtracting pieces, and referring to future docs, I corrected the code which you currently see here.
-
-                  Currently I cannot get “send” into compiling code, and that might be a good thing — I would like to see a more specific keyword for emptying the account. I’m not sure how to check the current balance without recording it in an instance variable (Solidity’s deprecated this.balance and newer address-casting-then-balance methods didn’t work). Also I didn’t get a chance to see how the percentage calculation works. [fix: track balance]
+                  This is the final calculation; canceling or closing the contract according to the agreed profit ratio.
+                  In event of the contract closing before it started, the code should return initial investments.
+                  Whenever the contract is closed, there will be small gas and transaction fees, but the bank is in the right to charge the client for these fees;
+                  in Islamic finance this is permissible even in Qard al-Hassan loans.
                 </p>
 
-                Libra spec and coding
-                https://developers.libra.org/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf
-
-                Gas pressure from optimization, vs. readability and security
-                https://twitter.com/paddypisa/status/1149971603536666625
-
-                In-browser basics
-                https://github.com/austintgriffith/burner-wallet
-                https://medium.com/metamask/eip-1102-preparing-your-dapp-5027b2c9ed76
-
-                Android
-                https://github.com/lumitechnologies/Lumi-SDK-Android
-
-                Exchange launch kit
-                https://blog.0xproject.com/introducing-the-0x-launch-kit-4acdc3453585
-
-                https://medium.com/@kolten/explore-stellar-addresses-and-the-stellar-dex-using-python-e72611822b48
-                https://twitter.com/sassal0x/status/1153665136726429696
-                https://media.consensys.net/introducing-elle-a-formally-verified-evm-compiler-to-write-more-secure-ethereum-code-90d1038e1886
-
-                https://github.com/oleiba/blockchain-getting-started/blob/master/README.md
-https://www.trufflesuite.com/docs/truffle/codec/
+                <h4>Future developments</h4>
+                <p>
+                  Facebook's centralized currency, Libra, promises to have its own smart contract language.
+                </p>
               </section>
             </div>
           </div>
