@@ -6,7 +6,7 @@ $(document).ready(function(){
       $(doc).find("ul").show();
       return;
     }
-    if (num && num !== 5) {
+    if (num && num !== 5 && num !== 7) {
       var expand = $("<button>").text("+"),
           clicked = false;
       expand.click(function(e){
