@@ -55,7 +55,6 @@ New Stuff
 Tokens
   Token sponsor: https://medium.com/uma-project/build-with-synthetic-asset-tokens-at-ethwaterloo-9410a9e60f06
     via https://www.notion.so/umaproject/Poop-Exchange-Tokens-to-track-shit-sightings-in-SF-e1dbb976cb6e4d46b6382859bda9bfb4
-  Coinbase guide https://blog.coinbase.com/intro-to-smart-contracts-f436b1ac2bb8
   Telegram vs. SEC https://www.sec.gov/news/press-release/2019-212
   Kik response to SEC DefendCrypto.org
     https://www.scribd.com/document/420996750/2019-08-06-Answer-dckt-22-0
@@ -92,12 +91,6 @@ US diversity
   https://cryptobriefing.com/defi-unbanked-south-bronx/
   file:///Users/ndoiron404/Downloads/Bitcoin & Black America - Isaiah Jackson.pdf
 
-Sharia records
-  Bitcoin, Bitcoin Cash (halal bundle in crypto)
-  https://cointelegraph.com/news/blockchain-firm-algorand-announces-sharia-certification-for-islamic-finance
-
-Futures are not allowed, mention gambling and futures in one block
-
 Privacy matters
   https://twitter.com/SarahJamieLewis/status/1142125889066418177
   https://www.coindesk.com/snowden-the-most-important-thing-bitcoin-is-missing-right-now-is-privacy
@@ -119,15 +112,13 @@ https://thenextweb.com/hardfork/2019/11/05/oxfam-ethereum-blockchain-microinsura
 Substack authors + crypto payments https://twitter.com/wheatpond/status/1192559015697534977
 Lightning network widget https://ion.radar.tech/redshift
 Chat app with tokens https://twitter.com/SenseChat
-Northern Ireland suggestion
+Northern Ireland / Brexit suggestion
 Faucet: https://twitter.com/wheatpond/status/1192600314379210753
 Aragon leaving Ether - https://twitter.com/notgrubles/status/1191507467240460290 - moving to Stratis?
 UK+Europe IF banking dev policies, personal + home vs. commercial banking: https://twitter.com/OMFIF/status/1166723894130237441
 
 Newer links
-Zeppelin
 https://twitter.com/defidollar/status/1284876155120545792
-cryptoforhealth.com / Coinbase - this was a scam!!
 https://www.coindesk.com/bahamas-digital-currency-sand-dollar-hurricane
 el salvador village adopts bitcoin
 singapore central bank blockchain ready for adoption
@@ -145,7 +136,6 @@ Grassroots Economics on hyperlocal cryptocurrencies https://restofworld.org/2020
   https://twitter.com/KenyaRedCross/status/1276130833502437376
 https://twitter.com/ghcryptoguy/status/1279746302214094851
 https://twitter.com/pesa_africa/status/1279984050132979712
-  MPESA weekly basis
 https://twitter.com/joincoded/status/1279098783406702593
 Jill Carson https://nlwcrypto.libsyn.com/why-the-robinhood-revolution-is-the-future-of-finance-feat-jill-carlson
 Lebanon
@@ -167,8 +157,6 @@ http://emergingimpact.com/about/
 https://www.salaamgateway.com/story/nigeria-a-country-of-100-mln-muslims-is-slowly-expanding-its-islamic-economy
 https://www.youtube.com/watch?v=qBsM1ZZ2HlA
 https://www.forbes.com/sites/pawelkuskowski/2020/06/07/central-bank-digital-currencies-cbdc-a-crisis-recovery-tool-for-governments/?utm_source=TWITTER&utm_medium=social&utm_content=3404517231&utm_campaign=sprinklrForbesCrypto#2b64cc30483a
-not as prevalent in Malaysia https://www.reddit.com/r/AskHistorians/comments/6dn7h4/before_the_advent_of_modern_travel_did_all/
-stopcovid.io
 Blockchain 101 @ INCEIF https://www.youtube.com/watch?v=X3pcZt3sPsQ
 Novi
 https://github.com/akropolisio/akropolisOS
@@ -194,7 +182,6 @@ https://twitter.com/maraoz/status/1261778150310150144
     https://twitter.com/maraoz/status/1261815192637313024
 https://decrypt.co/24932/tezos-kathleen-arthur-breitman-quitting-project
 https://www.forbes.com/sites/shehanchandrasekera/2020/05/13/the-irs-is-hiring-consultants-to-crack-down-on-cryptocurrency-tax-evasion/#4bbe00a1437b
-not legal or financial advice disclaimer
 Solidity: https://twitter.com/nanexcool/status/1259623747339849729
 https://twitter.com/MOFUAE/status/1258319876957130752
 zcash https://www.forbes.com/sites/michaeldelcastillo/2020/05/06/cypherpunk-zooko-wilcox-wants-zcash-mainstream/?utm_campaign=forbes&utm_source=twitter&utm_medium=social&utm_term=Valerie/#593ab542416b
