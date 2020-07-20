@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $("ul ul").hide();
   $("nav > ul > li").each(function(num, doc) {
-    if ($(doc).find("a").attr("href").indexOf(window.location.pathname) !== -1) {
+    if (window.location.pathname.length > 4 && $(doc).find("a").attr("href").indexOf(window.location.pathname) !== -1) {
       $(doc).find("ul").show();
       return;
     }

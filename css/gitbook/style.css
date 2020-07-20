@@ -19,6 +19,9 @@
   float: right;
   margin-top: 5px;
 }
+ul ul .chapter:last-child {
+  border-bottom: none;
+}
 @media (max-width: 1000px)  {
   .book-summary, .chapter button {
     display:  none;
